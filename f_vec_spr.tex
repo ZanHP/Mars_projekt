@@ -43,16 +43,17 @@ V članku spoznamo funkcije več spremenljivk in se previdno dotaknemo pomembnih
 \section{Uvod}
 Vsak naj bi poznal funkciije ene spremenljivke, saj se jih obravnava že v osnovni šoli. Kdor potem nadaljuje šolanje, se z njimi še bolje spozna, redki pa se spoznajo s funkcijami več spremenljivk. Grafi takih funkcij so dosti težje predstavljivi kot grafi funkcij ene spremenljivke, ki jih lahko dokaj enostavno upodobimo na ravnini. Čim več spremenljivk nastopa v prostoru iz katerega slikamo, tem bolj zapleteni so njihovi grafi, zapletenost pa v tem primeru vodi do večje svobode in nam odpira vrata do bolj abstraktnih idej.
 
-\section{Funkcije dveh spemenljivk}
+\section{Funkcije dveh spremenljivk}
 
 \begin{definicija}
 \textbf{Funkcija dveh neodvisnih spremenljivk} je predpis, ki vsakemu paru $(x,y)$ iz podmnožice ravnine predpiše natančno določeno realno število.
-Je preslikava $R^2 \rightarrow R$.
-$$f:(x,y) \Rightarrow z=f(x,y)$$
+Velja torej: 
+$$f : \mathbb{R}^2 \rightarrow \mathbb{R}$$
+$$f:(x,y) \mapsto z=f(x,y).$$
 
 \end{definicija}
 
-Realno število, ki je prirejeno spremenljivkam v trorazsežnem prostoru pomeni višino nad točko. Upodabljamo lahko le funkcije z do tremimi spremenljivkami, za sistem štirih ali večih spemenljivk pa je upodabljanje nemogoče. Za razliko od funkcij z eno spremenljivko upodabljamo funkcije dveh spremenljivk s ploskvijo, ki ima enačbo $u-f(x,y)=0$. Spoznali smo nekaj preprostih funkcij, ogledali pa smo si tudi primere zahtevnejših funkcij dveh spremenljivk.
+Realno število, ki je prirejeno spremenljivkam v trorazsežnem prostoru pomeni višino nad točko. Upodabljamo lahko le funkcije z do dvema spremenljivkama, za funkcije treh ali večih spemenljivk pa je upodabljanje njihovega grafa na ljudem predstavljiv način nemogoče. Za razliko od funkcij z eno spremenljivko upodabljamo grafe lepih funkcij dveh spremenljivk s ploskvijo, ki ima enačbo $z-f(x,y)=0$. Spoznali smo nekaj grafov preprostih funkcij, ogledali pa smo si tudi primere zahtevnejših funkcij dveh spremenljivk.
 
 \begin{zgled}
 Funkcija $f(x,y)=x^2+y^2$ Graf funkcije je dvorazsežni objekt v trorazsežnem prostoru.
@@ -80,10 +81,11 @@ Primer zahtevnejše funkcije $g(x,y)=x^2 sin(x)y^3$
 Izračunali smo tudi volumen krogle z različnimi metodami. Začnimo s to, ki smo jo spoznali že v gimnaziji, kasneje pa bomo do iste formule prišli še na drug način. 
 
 \begin{zgled} 
-Izračun prostornine vrtenine, ki nastane z vrtenjem funkcije $f(x)=\sqrt{(1-x^2)}$ .
+Izračun prostornine vrtenine, ki nastane z vrtenjem grafa funkcije $f(x)=\sqrt{(1-x^2)}$. Graf te funkcije nad zaprtim intervalom $[-1,1]$ je ravno zgornja polovica enotstke krožnice, zato je rotacijsko telo enotska sfera, integral pa predstavlja volumen krogle.
 
-$$V=\pi \int_{a}^b{f(x)}^2dx$$
-$$V=\pi \int_{-1}^1{{\sqrt{(1-x^2)}}}^2dx=\pi(x-\frac{x^3}{3})\mid_{-1}^1= \pi (1-\frac{1}{3})-\pi (-1+\frac{1}{3})$$
+Uporabimo formulo iz gimnazije in rezultat hitro sledi:
+$$V=\pi \int_{a}^b{f(x)}^2\mathrm{d} x$$
+$$V=\pi \int_{-1}^1{{\sqrt{(1-x^2)}}}^2\mathrm{d} x=\pi(x-\frac{x^3}{3})\big|_{-1}^1= \pi (1-\frac{1}{3})-\pi (-1+\frac{1}{3})$$
 $$V=\frac{4}{3}\pi$$
 \end{zgled}
 
@@ -105,7 +107,7 @@ $$\int_{g(U)}^{}f(x) \mathrm{d} V=\int_{U}^{}f(g(t)) \big |\det Dg(t) \big | \ma
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Računanje determinante reda 2 in 3}
 
-Poglejmo si kako se računa determinanta reda 2 in 3. Tukaj so eksplicitne formule za njihov izračun.
+Oglejmo si, kako izračunati determinanto reda 2 in 3. Navedene so eksplicitne formule za njihov izračun.
 
 \[
 \begin{vmatrix}
@@ -155,7 +157,8 @@ Kartezični koordinati torej z $r$ in $\phi$ izrazimo takole:
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=.4\textwidth]{polarne_koordinate.png}
+\includegraphics[width=.3\textwidth]{polarne_koordinate.png}
+\caption{Grafični prikaz prejšnje izražave}
 \end{figure}
 
 
@@ -165,7 +168,7 @@ Kartezični koordinati torej z $r$ in $\phi$ izrazimo takole:
 Sferični ali krogelni koordinatni sistem je krivočrtni sistem koordinat v trirazsežnem prostoru, s pomočjo katerega enolično določimo lego točk na sferi ali sferoidu. Za določanje lege točke v prostoru vedno potrebujemo tri koordinate. Pri sfernem koordinatnem sistemu uporabljamo sferične koordinate:
 \begin{itemize}
 \item $r$ - razdalja od točke do koordinatnega izhodišča (dolžina vektorja $\vec{r}$)
-\item $\phi$ - kot med $x$-osjo in smerjo pravokotne projekcije vektorja $\vec{r}$ na ravnino $x$-$y$
+\item $\phi$ - kot med $x$-osjo in smerjo pravokotne projekcije vektorja $\vec{r}$ na $xy$-ravnino
 \item $\theta$ - kot med ravnino $x$-$y$ in vektorjem $\vec{r}$
 \end{itemize}
 
@@ -179,7 +182,7 @@ Dobimo koordinate:
 \item $z=r \sin \theta$
 \end{itemize}
 
-
+(manjka še slika kot pri polarnih koordinatah)
 
 
 \section{Parcialni odvod}
@@ -205,7 +208,8 @@ Za funkcijo $f(x, y)= x^2+xy+y^2$ je $\frac{\partial f}{\partial x}= 2x+y+y^2$ i
 \end{zgled}
 
 \section{Jacobijeva matrika}
-Jacobijeva matrika je matrika, ki jo sestavljajo parcialni odvodi prvega reda.
+Jacobijeva matrika preslikave $g: \mathbb{R}^2 \rightarrow \mathbb{R}^2$ oziroma $g: \mathbb{R}^3 \rightarrow \mathbb{R}^3$ je matrika, ki jo sestavljajo parcialni odvodi prvega reda.
+
 Matrika reda 2 ima obliko:
 $$
 Jg(x_1,x_2)=
@@ -215,7 +219,7 @@ Jg(x_1,x_2)=
 \end{bmatrix}
 $$
 
-\noindent Matrika reda 3 ima obliko:
+Matrika reda 3 ima obliko:
 $$
 Jg(x_1,x_2,x_3)=
 \begin{bmatrix}
@@ -230,7 +234,7 @@ $$
 \section{Ploščina kroga in volumen krogle}
 
 \begin{naloga}
-S pomočjo polarnih koordinat in parcialnih odvodov izračunaj formulo za računanje ploščine kroga. \\
+S pomočjo polarnih koordinat in parcialnih odvodov izpelji formulo za računanje ploščine kroga. \\
 \emph
 {Najprej izračunamo parcialne odvode polarnih koordinat:}
 
@@ -241,7 +245,7 @@ S pomočjo polarnih koordinat in parcialnih odvodov izračunaj formulo za račun
 \item $\frac{\partial y}{\partial \phi}= r  \cos \phi$ \\
 \end{itemize}
 \emph
-{Parcialni odvod izračunamo, da lahko izračunamo Jacobijevo determinanto s pomočjo Jacobijeve matrike:}
+{Parcialne odvode izračunamo, vstavimo v Jacobijevo matriko in izračunamo njeno determinanto.}
 \\
 \begin{center}
  {
@@ -250,15 +254,15 @@ $\det (Jg)(r,\phi)=$ \large $ \begin{vmatrix} \frac{\partial x}{\partial r}  &  
 \end{center}
 
 \emph
-{Dobimo determinanto diferenciala preslikave $g$, ki jo vstavimo v dvojni integral:} \\
-
-$ \int^{2\pi}_{0} \int^{R}_{0}   \begin{vmatrix} \det Dg \end{vmatrix}  \mathrm{d} r \mathrm{d}\phi \\
- =  \int^{2\pi}_{0} \int^{R}_{0}  r \mathrm{d} r \mathrm{d}\phi \\
- =  \int^{2\pi}_{0} \frac{r^2}{2} \big|^{R}_{0} \mathrm{d}\phi \\
- =  \int^{2\pi}_{0} \frac{R^2}{2} \mathrm{d}\phi \\
- =  \frac{R^2}{2} \phi  \big|^{2\pi}_{0} \\
- =  \frac{R^2}{2} 2\pi \\
- =  \pi R^2 $ \\
+{Dobimo determinanto diferenciala preslikave $g$, ki jo vstavimo v dvojni integral:}
+\begin{eqnarray*}
+\int^{2\pi}_{0} \int^{R}_{0}   \begin{vmatrix} \det Dg \end{vmatrix}  \mathrm{d} r \mathrm{d}\phi &=&  \int^{2\pi}_{0} \int^{R}_{0}  r \mathrm{d} r \mathrm{d}\phi \\
+ &=&  \int^{2\pi}_{0} \frac{r^2}{2} \big|^{R}_{0} \mathrm{d}\phi \\
+ &=&  \int^{2\pi}_{0} \frac{R^2}{2} \mathrm{d}\phi \\
+ &=&  \frac{R^2}{2} \phi  \big|^{2\pi}_{0} \\
+ &=&  \frac{R^2}{2} 2\pi \\
+ &=&  \pi R^2
+\end{eqnarray*}
 
 \emph
 {Ugotovimo, da smo dobili formulo za računanje površine kroga:}
@@ -269,26 +273,27 @@ $$
 
 
 \begin{naloga}
-S pomočjo sferičnih koordinat in parcialnih odvodov izračunaj formulo za volumen krogle.
+S pomočjo sferičnih koordinat in parcialnih odvodov izpelji formulo za volumen krogle.
 
 \emph{Podobno kot prej izračunamo parcialne odvode in jih vpišemo v matriko, s katero izračunamo determinanto:}
 \\
 \begin{center}
 $ \det (Jg)(r,\phi, \theta)$ $=$  \\ $=$ \large  $\begin{vmatrix} \frac{\partial x}{\partial r}  &  \frac{\partial x}{\partial \phi} &  \frac{\partial x}{\partial z} \\  \frac{\partial y}{\partial r}  &  \frac{\partial y}{\partial \phi} &  \frac{\partial x}{\partial z} \\ \frac{\partial \theta}{\partial r}  &  \frac{\partial \theta}{\partial \phi} &  \frac{\partial \theta}{\partial z} \end{vmatrix} $ 
-$=$  \normalsize $ \begin{vmatrix} \cos \phi  \cos \theta & \sin \phi  \cos \theta & \sin \theta \\ r \sin \phi  \cos \theta  & r \cos \phi  \cos \theta  & 0 \\ r \cos \phi  (-\sin \theta)  & r \sin \phi  (-\sin \theta)  & r \cos \theta \\ \end{vmatrix} $  $=$ $r^2 \cos \theta $
+$=$  \normalsize $ \begin{vmatrix} \cos \phi  \cos \theta & \sin \phi  \cos \theta & \sin \theta \\ r \sin \phi  \cos \theta  & r \cos \phi  \cos \theta  & 0 \\ -r \cos \phi  \sin \theta  & -r \sin \phi  \sin \theta  & r \cos \theta \\ \end{vmatrix} $  $=$ $r^2 \cos \theta $
 \end{center}
 
 \emph{Determinanto vstavimo v trojni integral:} \\
 
-$ \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \int^{2\pi}_{0} \int^{R}_{0}  \big | \det Dg \big | \mathrm{d} r \mathrm{d}\phi \mathrm{d}\theta  \\
- =  \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \int^{2\pi}_{0} \int^{R}_{0}   r^2 \cos \theta   \mathrm{d} r \mathrm{d}\phi \mathrm{d}\theta  \\
- =  \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \int^{2\pi}_{0} \cos \theta \frac {r^3}{3} \big |^{R}_{0} \mathrm{d}\phi \mathrm{d}\theta  \\
- =  \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \int^{2\pi}_{0} \cos \theta \frac {R^3}{3} \mathrm{d}\phi \mathrm{d}\theta  \\
- =  \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \cos \theta \frac {R^3}{3} \big |^{2 \pi}_{0} \mathrm{d} \theta  \\
- =  \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \frac {2 \pi R^3}{3} \cos \theta \mathrm{d} \theta  \\
- =  \frac {2 \pi R^3}{3} \sin \theta \big |^{\frac {\pi}{2}}_{-\frac {\pi}{2}}  \\
- =  (2) \frac {2 \pi R^3}{3}  \\
- =  \frac {4 \pi R^3}{3} $ \\
+\begin{eqnarray*}
+\int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \int^{2\pi}_{0} \int^{R}_{0}  \big | \det Dg \big | \mathrm{d} r \mathrm{d}\phi \mathrm{d}\theta  &=&  \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \int^{2\pi}_{0} \int^{R}_{0}   r^2 \cos \theta   \mathrm{d} r \mathrm{d}\phi \mathrm{d}\theta  \\
+ &=&  \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \int^{2\pi}_{0} \cos \theta \frac {r^3}{3} \big |^{R}_{0} \mathrm{d}\phi \mathrm{d}\theta  \\
+ &=&  \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \int^{2\pi}_{0} \cos \theta \frac {R^3}{3} \mathrm{d}\phi \mathrm{d}\theta  \\
+ &=&  \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \cos \theta \frac {R^3}{3} \big |^{2 \pi}_{0} \mathrm{d} \theta  \\
+ &=&  \int^{\frac {\pi}{2}}_{- \frac {\pi}{2}} \frac {2 \pi R^3}{3} \cos \theta \mathrm{d} \theta  \\
+ &=&  \frac {2 \pi R^3}{3} \sin \theta \big |^{\frac {\pi}{2}}_{-\frac {\pi}{2}}  \\
+ &=&  (2) \frac {2 \pi R^3}{3}  \\
+ &=&  \frac {4 \pi R^3}{3}  \\
+\end{eqnarray*}
 
 \emph
 {Ugotovimo, da smo dobili formulo za računanje volumna krogle:}
@@ -296,6 +301,81 @@ $$
 V=\frac{4\pi r^3}{3}
 $$
 \end{naloga}
+
+%%%%%%%%%%%
+
+\section{Eulerjeva $\Gamma $-funkcija}
+
+Pri delu s funkcijami z več spemenljivkami smo spoznali tudi funkcijo gama. Prvi je funkcijo zapisal Leonhard Euler leta 1729, ko je pisal pismo svojemu prijatelju matematiku. Odvisna je le od ene spremenljivke in slika pozitivna realna števila $\mathbb{R}^+$ v realna $\mathbb{R} $. Funkcija je zanimiva, saj če v njo vstavimo celo pozitivno število $n$, potem lahko izračunamo fakulteto števila $n-1$.
+\begin{definicija}
+Funkcija gama je za $t>0, t\in\mathbb{R}$, definirana kot:
+\[ \Gamma (t) = \int^{\infty}_{0} x^{t-1} e^{-x} \mathrm{d} x \]
+\end{definicija}
+
+\begin{izrek} 
+\label{izrek:enacbazagamo}
+Za izračun $n!$ s funkcijo $ \Gamma (t)$ se uporablja enačba:
+\[ \Gamma (t) = (t - 1) \Gamma (t-1) \] 
+\end{izrek}
+
+
+Če izrek uporabimo za vrednost $ \Gamma (t-1) $, tako da  $$ \Gamma (t-1) = (t-1) \Gamma (t-2),$$ in postopek ponovimo za vsako nasljedno manjšo vrednost $t$,
+potem velja: 
+\begin{izrek}
+\[ \Gamma (t) = (t-1)! \].
+\end{izrek}
+%, quote izrek,enačba
+
+Do zapisanega smo prišli z integriranjem funkcije po načinu per partes. Ker se enačbe za per partes na začetku nismo spomnili, smo jo enostavno izpeljali iz pravila za odvajanje produkta funkcij.
+\begin{eqnarray*}
+ (f \cdot g)' = f' \cdot g + f \cdot g' \\
+(f \cdot g)' - f' \cdot g =  f \cdot g' \\
+(f \cdot g)' - f' \cdot g =  f \cdot g' ~~ \Big| \cdot \int \\
+fg - \int f'g = \int fg' 
+\end{eqnarray*}
+
+Če se resno lotimo dokazovanja, da za naravno število $t$ velja $ \Gamma (t) = (t-1)!$, kar smo tudi storili, bodo enačbe funkcije izgledale tako:
+\begin{eqnarray*} 
+\Gamma (t) = \int^{\infty}_{0} e^{-x} x^{t-1} \mathrm{d} x &=& x^{t-1} e^{-x} \Big|^{\infty}_{0} + \int^{\infty}_{0} e^{-x} x^{t-2} (t-1) \mathrm{d} x \\
+&=&  (t-1) \cdot \int^{\infty}_{0} e^{-x} x^{t-2} \mathrm{d} x \\
+&=& (t-1) \Big( e^{-x} x^{t-2} \Big|^{\infty}_{0} + (t-2) \int^{\infty}_{0} e^{-x} x^{t-3} \mathrm{d} x \Big) \\
+&=& (t-1)(t-2) \int^{\infty}_{0} e^{-x} x^{t-3} \mathrm{d} x = \ldots = (t-1)! ~ , 
+\end{eqnarray*}
+saj je $ \lim_{x \to \infty} \dfrac{x^{t-1}}{e^x} = 0 $. 
+
+Izbrane vrednosti funkcije, pri katerih je spremenljivka $t \in \mathbb{R^{+}}$, so izračunane v sledeči tabeli.
+
+\begin{center}
+\begin{tabular}{| c || c | c | c | c | c | c |}
+\hline
+$t$ & $\frac{1}{2}$ & 1 & $\frac{3}{2}$ & 2 & $\frac{5}{2}$ & 3 \\
+\hline
+$\Gamma (t)$ & $\sqrt{\pi}$ & 1 & $\frac{\sqrt{\pi}}{2}$ & 1 & $\frac{3 \sqrt{\pi}}{4}$ & 2 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{gama.png}
+\caption{Graf funkcije $ \Gamma (t) $}
+\end{figure}
+
+Ko se spremenljivka $t$ bliža neskončnosti, gre tudi $ \Gamma (t)$ proti neskončnosti. Podobno se zgodi, ko se $t$ bliža vrednosti 0:
+\begin{itemize}
+
+\item $ \lim_{t \to \infty} \Gamma (t)= \infty $
+\item $ \lim_{t \to 0} \Gamma (t)= \infty $
+\end{itemize}
+
+Opisana funkcija nam je v pomoč pri izražanju nekaterih integralov. Mi smo naredili naslednji primer:
+\[ \int^{\infty}_{0} x^{\frac{1}{3}} e^{-x}\mathrm{d} x = \frac{\Gamma (\frac{4}{3})}{3^{\frac{4}{3}}}. \]
+
+
+
+
+
+
 
 
 
@@ -305,17 +385,6 @@ $$
 
 
 %http://www.fmf.uni-lj.si/~hladnik/Analiza/ParcialniOdvodi.pdf
-
-
-
-
-
-
-
-
-
-
-
 
 
 
